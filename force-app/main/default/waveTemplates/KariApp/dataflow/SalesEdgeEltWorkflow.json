@@ -1,0 +1,43 @@
+{
+  "notificationLevel": "",
+  "workflowDefinition": {
+    "sfdcDigest_Opportunity": {
+      "action": "sfdcDigest",
+      "parameters": {
+        "fields": [
+          {"name": "AccountId"},
+          {"name": "Amount"},
+          {"name": "CloseDate"},
+          {"name": "CreatedById"},
+          {"name": "Description"},
+          {"name": "Id"},
+          {"name": "LeadSource"},
+          {"name": "Name"},
+          {"name": "OwnerId"},
+          {"name": "StageName"},
+          {"name": "Type"}
+        ],
+        "object": "Opportunity"
+      }
+    },
+    "register_All Opportunities": {
+      "action": "sfdcRegister",
+      "parameters": {
+        "name": "All Opportunities",
+        "alias": "${App.Datasets.All_Opportunities_tp.FullyQualifiedName}",
+        "source": "sfdcDigest_Opportunity"
+      }
+    }
+  },
+  "_type": "dataflow",
+  "description": "This is the default Salesforce dataflow.",
+  "MasterLabel": "Default Salesforce Dataflow",
+  "nextRun": "",
+  "WorkflowStatus": "Inactive",
+  "isDeletable": false,
+  "longRunningAlertInMins": "",
+  "DataflowType": "USER",
+  "name": "SalesEdgeEltWorkflow",
+  "_url": "/insights/internal_api/v1.0/esObject/workflow//json",
+  "_uid": ""
+}

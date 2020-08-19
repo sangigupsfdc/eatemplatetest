@@ -1,0 +1,89 @@
+{
+  "templateType" : "app",
+  "label" : "KariApp",
+  "name" : "KariApp",
+  "description" : "",
+  "assetVersion" : 49.0,
+  "variableDefinition" : "variables.json",
+  "uiDefinition" : "ui.json",
+  "rules" : [
+    {
+      "type" : "templateToApp",
+      "file" : "template-to-app-rules.json"
+    },
+    {
+      "type" : "appToTemplate",
+      "file" : "app-to-template-rules.json"
+    }
+  ],
+  "releaseInfo" : {
+    "templateVersion" : "1.0",
+    "notesFile" : "releaseNotes.html"
+  },
+  "folderDefinition" : "folder.json",
+  "externalFiles" : [ ],
+  "lenses" : [
+    {
+      "label" : "My cool Lens",
+      "name" : "My_cool_Lens_tp",
+      "condition" : "${Variables.Overrides.createAllLenses}",
+      "file" : "lenses/My_cool_Lens.json"
+    }
+  ],
+  "dashboards" : [
+    {
+      "label" : "KariDashboard",
+      "name" : "KariDashboard_tp",
+      "condition" : "${Variables.Overrides.createAllDashboards}",
+      "file" : "dashboards/KariDashboard.json"
+    },
+    {
+      "label" : "My Cool Dashboard",
+      "name" : "My_Cool_Dashboard_tp",
+      "condition" : "${Variables.Overrides.createAllDashboards}",
+      "file" : "dashboards/My_Cool_Dashboard.json"
+    },
+    {
+      "label" : "WorkingDashboard",
+      "name" : "New_dashboard_tp",
+      "condition" : "${Variables.Overrides.createAllDashboards}",
+      "file" : "dashboards/New_dashboard.json"
+    }
+  ],
+  "eltDataflows" : [
+    {
+      "label" : "Default Salesforce Dataflow",
+      "name" : "SalesEdgeEltWorkflow",
+      "condition" : "${Variables.Overrides.createDataflow}",
+      "file" : "dataflow/SalesEdgeEltWorkflow.json"
+    }
+  ],
+  "recipes" : [ ],
+  "datasetFiles" : [
+    {
+      "label" : "All Opportunities",
+      "name" : "All_Opportunities_tp",
+      "condition" : "${Variables.Overrides.createAllDatasetFiles}",
+      "userXmd" : "dataset_files/All_Opportunities_XMD.json"
+    },
+    {
+      "label" : "Opportunities",
+      "name" : "Opportunities_tp",
+      "condition" : "${Variables.Overrides.createAllDatasetFiles}",
+      "userXmd" : "dataset_files/Opportunities_XMD.json"
+    }
+  ],
+  "storedQueries" : [ ],
+  "imageFiles" : [ ],
+  "extendedTypes" : { },
+  "templateDependencies" : [ ],
+  "icons" : {
+    "appBadge" : {
+      "name" : "16.png"
+    },
+    "templateBadge" : {
+      "name" : "default.png"
+    },
+    "templatePreviews" : [ ]
+  }
+}
