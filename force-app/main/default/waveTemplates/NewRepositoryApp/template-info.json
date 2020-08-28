@@ -1,7 +1,7 @@
 {
   "templateType" : "embeddedapp",
-  "label" : "TestNewApp",
-  "name" : "TestNewApp",
+  "label" : "NewRepositoryApp",
+  "name" : "NewRepositoryApp",
   "description" : "",
   "assetVersion" : 49.0,
   "variableDefinition" : "variables.json",
@@ -25,15 +25,29 @@
   "lenses" : [ ],
   "dashboards" : [
     {
-      "label" : "Sales Performance",
-      "name" : "Sales_Performance_tp",
+      "label" : "RepositoryNew",
+      "name" : "RepositoryNew_tp",
       "condition" : "${Variables.Overrides.createAllDashboards}",
-      "file" : "dashboards/Sales_Performance.json"
+      "file" : "dashboards/RepositoryNew.json"
     }
   ],
-  "eltDataflows" : [ ],
+  "eltDataflows" : [
+    {
+      "label" : "Repository",
+      "name" : "Repository",
+      "condition" : "${Variables.Overrides.createDataflow}",
+      "file" : "dataflow/Repository.json"
+    }
+  ],
   "recipes" : [ ],
-  "datasetFiles" : [ ],
+  "datasetFiles" : [
+    {
+      "label" : "Repository",
+      "name" : "Repository_tp",
+      "condition" : "${Variables.Overrides.createAllDatasetFiles}",
+      "userXmd" : "dataset_files/Repository_XMD.json"
+    }
+  ],
   "storedQueries" : [ ],
   "imageFiles" : [ ],
   "extendedTypes" : { },

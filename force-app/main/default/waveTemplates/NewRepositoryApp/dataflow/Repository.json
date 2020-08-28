@@ -1,0 +1,54 @@
+{
+  "notificationLevel": "",
+  "workflowDefinition": {
+    "register_Repository": {
+      "action": "sfdcRegister",
+      "parameters": {
+        "name": "Repository",
+        "alias": "${App.Datasets.Repository_tp.FullyQualifiedName}",
+        "source": "sfdcDigest_Repository__c"
+      }
+    },
+    "sfdcDigest_Repository__c": {
+      "action": "sfdcDigest",
+      "parameters": {
+        "fields": [
+          {"name": "CreatedById"},
+          {"name": "Description__c"},
+          {"name": "External_ID__c"},
+          {"name": "Forks__c"},
+          {"name": "GitHub_URL__c"},
+          {"name": "Id"},
+          {"name": "License__c"},
+          {"name": "Name"},
+          {"name": "Name__c"},
+          {"name": "Open_Issues__c"},
+          {"name": "Page_Views__c"},
+          {"name": "Primary_Language__c"},
+          {"name": "Pushed_At__c"},
+          {"name": "Stargazers__c"},
+          {"name": "Temp_Page_Views__c"},
+          {"name": "Temp_Unique_Page_Views__c"},
+          {"name": "Todays_Page_Views__c"},
+          {"name": "Todays_Unique_Page_Views__c"},
+          {"name": "Unique_Page_Views__c"},
+          {"name": "Updated_At__c"},
+          {"name": "Visibility__c"},
+          {"name": "Watchers__c"}
+        ],
+        "object": "Repository__c"
+      }
+    }
+  },
+  "_type": "dataflow",
+  "description": "Repository",
+  "MasterLabel": "Repository",
+  "nextRun": "",
+  "WorkflowStatus": "Inactive",
+  "isDeletable": true,
+  "longRunningAlertInMins": "",
+  "DataflowType": "USER",
+  "name": "Repository",
+  "_url": "/insights/internal_api/v1.0/esObject/workflow//json",
+  "_uid": ""
+}

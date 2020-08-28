@@ -1,0 +1,6 @@
+WaveAutoInstallRequest newRequest = new WaveAutoInstallRequest();
+newRequest.put('Name', 'Test StartDataflow request');
+newRequest.put('RequestStatus', 'Enqueued');
+newRequest.put('FolderId', '<folderid>');
+newRequest.put('RequestType', 'StartDataflow');
+insert newRequest;

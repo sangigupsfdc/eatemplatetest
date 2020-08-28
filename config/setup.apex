@@ -1,7 +1,5 @@
-
-
 //Create Dashbaord from EA template
-String templateApiName = 'RepositoryApp';
+String templateApiName = 'NewRepositoryApp';
 
 Map<String, Object> appConfiguration = new Map<String, Object>();
 appConfiguration.put('deleteAppOnConstructionFailure', true);

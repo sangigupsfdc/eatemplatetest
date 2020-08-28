@@ -1,5 +1,5 @@
 # create scratch org
-sfdx force:org:create -f config/project-scratch-def.json -s -d 7 -w 60 -a scratchEATest
+sfdx force:org:create -f config/project-scratch-def.json -s -d 7 -w 60 -a scratchEATest1
 
 #Assign Analytics view only permset to user
 sfdx force:user:permset:assign -n AnalyticsViewOnlyUser
@@ -10,7 +10,7 @@ sfdx force:apex:execute -f config/setupUsers.apex
 
 #Sample: https://github.com/skipsauls/eadx
 #Install package
-sfdx force:package:install  -s AllUsers -p 04t5w000005ubuw -w 20
+sfdx force:package:install  -s AllUsers -p 04t5w000004GnQx -w 20
 
 
 #Create dashboard from template
@@ -19,6 +19,11 @@ sfdx force:apex:execute -f config/setup.apex
 # push the contents of this repo into the scratch org
 #sfdx force:source:push
 
+#Upload data into the repository object
+sfdx force:data:bulk:upsert -f data/Repository.csv -s Repository__c -i External_ID__c
+
+#Bring data to Analytics Cloud from the repository object
+sfdx force:apex:execute -f config/setupPopulateDataflow.apex
 
 #open the org
 sfdx force:org:open
